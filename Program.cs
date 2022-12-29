@@ -1,12 +1,11 @@
 ﻿using System.Drawing;
 
 // See https://aka.ms/new-console-template for more information
-
 CreateTree ct=new CreateTree();
-LC_114 lc114=new LC_114();
+LC_655 lc655=new LC_655();
 
-TreeNode t=ct.createTree(new int?[]{1,2,5,3,4,null,6});
-lc114.Flatten(t);
+TreeNode t=ct.createTree(new int?[]{1,2,3,null,4});
+lc655.PrintTree(t);
 Console.WriteLine();
 
 Console.WriteLine("finish");
