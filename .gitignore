@@ -422,3 +422,6 @@ obj/
 .ionide
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,dotnetcore,csharp
+
+#自訂忽略檔案
+Program.cs
