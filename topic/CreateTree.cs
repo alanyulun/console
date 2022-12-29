@@ -17,9 +17,13 @@ public class CreateTree{
             for(int i=0;i<levelCount;i++){
                 TreeNode node=treeQ.Dequeue();
 
+                if(treeValQ.Count==0)
+                    break;
                 int? treeVal=treeValQ.Dequeue();
                 if(treeVal!=null)
                     node.left=new TreeNode((int)treeVal);
+                if(treeValQ.Count==0)
+                    break;
                 treeVal=treeValQ.Dequeue();
                 if(treeVal!=null)
                     node.right=new TreeNode((int)treeVal);
