@@ -38,23 +38,5 @@ public class LC_655{
             return 0;
 
         return 1+Math.Max(getLevel(node.left),getLevel(node.right));
-
-        // int rul=0;
-        // Queue<TreeNode> q=new Queue<TreeNode>();
-        // q.Enqueue(node);
-        // while(q.Count>0){
-        //     rul++;
-        //     int levelCount=q.Count;
-        //     for(int i=0;i<levelCount;i++){
-        //         TreeNode n=q.Dequeue();
-
-        //         if(n.left!=null)
-        //             q.Enqueue(n.left);
-        //         if(n.right!=null)
-        //             q.Enqueue(n.right);
-        //     }
-        // }
-
-        // return rul;
     }
 }
