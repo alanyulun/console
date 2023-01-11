@@ -1,13 +1,19 @@
 public class CreateTree{
-    public TreeNode createTree(int?[] treeValList){
-        if(treeValList.Length==0)
+    public TreeNode createTree(string treeData){
+        if(treeData.Length==0)
             return null;
 
+        string[] treeDataArr=treeData.Split(',');
         TreeNode rul=new TreeNode();
         Queue<int?> treeValQ=new Queue<int?>();
         Queue<TreeNode> treeQ=new Queue<TreeNode>();
-        foreach(var val in treeValList)
-            treeValQ.Enqueue(val);
+        foreach(var val in treeDataArr){
+            if(val=="null")
+                treeValQ.Enqueue(null);
+            else
+                treeValQ.Enqueue(int.Parse(val));
+        }
+            
         rul.val=(int)treeValQ.Dequeue();
         treeQ.Enqueue(rul);
 
